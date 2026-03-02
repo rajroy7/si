@@ -1,67 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>RAJ - 7SI</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Skirk</title>
+  <link rel="icon" href="https://ik.imagekit.io/gukc1okbd/Crystallina_Shape.webp" type="image/webp">
+  <script type="module" crossorigin src="/assets/index-D8CYf3Dr.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-D-3Llww0.css">
 </head>
 <body>
+  <!-- Mobile Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html"><img src="https://ik.imagekit.io/gukc1okbd/home.webp" class="icon"><span class="text">Home</span></a></li>
+      <li><a href="characters.html"><img src="https://ik.imagekit.io/gukc1okbd/characters.webp" class="icon"><span class="text">Characters</span></a></li>
+      <li><a href="weapons.html"><img src="https://ik.imagekit.io/gukc1okbd/weapons.webp" class="icon"><span class="text">Weapons</span></a></li>
+      <li><a href="artifacts.html"><img src="https://ik.imagekit.io/gukc1okbd/artifacts.webp" class="icon"><span class="text">Artifacts</span></a></li>
+      <li><a href="achievements.html"><img src="https://ik.imagekit.io/gukc1okbd/achievements.webp" class="icon"><span class="text">Achievements</span></a></li>
+      <li><a href="inventory.html"><img src="https://ik.imagekit.io/gukc1okbd/inventory.webp" class="icon"><span class="text">Inventory</span></a></li>
+      <li><a href="enemy.html"><img src="https://ik.imagekit.io/gukc1okbd/enemy.webp" class="icon"><span class="text">Enemy Creatures</span></a></li>
+      <li><a href="wishes.html"><img src="https://ik.imagekit.io/gukc1okbd/wishes.webp" class="icon"><span class="text">Character Wishes</span></a></li>
+      <li><a href="abyss.html"><img src="icons/abyss.webp" class="icon"><span class="text">Spiral Abyss</span></a></li>
+      <li><a href="theater.html"><img src="https://ik.imagekit.io/gukc1okbd/theater.webp" class="icon"><span class="text">Imaginarium Theater</span></a></li>
+      <li><a href="stygian.html"><img src="https://ik.imagekit.io/gukc1okbd/wishes.webp" class="icon"><span class="text">Stygian Onslaught</span></a></li>
+      <li><a href="furnishings.html"><img src="https://ik.imagekit.io/gukc1okbd/furnishings.webp" class="icon"><span class="text">Furnishings</span></a></li>
+      <li><a href="furnishing-set.html"><img src="https://ik.imagekit.io/gukc1okbd/furnishing-set.webp" class="icon"><span class="text">Furnishing Set</span></a></li>
+      <li><a href="miliastra.html"><img src="icons/miliastra.webp" class="icon"><span class="text">Miliastra</span></a></li>
+      <li class="settings-menu-item"><button id="settingsBtn" class="settings-menu-btn"><img src="https://ik.imagekit.io/gukc1okbd/settings.webp" class="icon"><span class="text">Settings</span></button></li>
+      <li><a href="mw-set.html"><img src="https://ik.imagekit.io/gukc1okbd/mw-set.webp" class="icon"><span class="text">Miliastra Wonderland Set</span></a></li>
+      <li><a href="mw-inventory.html"><img src="https://ik.imagekit.io/gukc1okbd/mw-inventory.webp" class="icon"><span class="text">Miliastra Wonderland Inventory</span></a></li>
+      <li><a href="search.html"><img src="https://ik.imagekit.io/gukc1okbd/search.webp" class="icon"><span class="text">Search</span></a></li>
+      <li><a href="diff.html"><img src="icons/diff.webp" class="icon"><span class="text">Diff</span></a></li>
+      <li><a href="tcg.html"><img src="https://ik.imagekit.io/gukc1okbd/tcg.webp" class="icon"><span class="text">Genius Invokation TCG</span></a></li>
+    </ul>
+  </div>
 
-    <!-- Header -->
-    <header>
-        <h1>RAJ - 7SI</h1>
-        <input type="text" placeholder="Search...">
-    </header>
-
-    <!-- Main Container -->
-    <div class="container">
-
-        <!-- Main Content -->
-        <main>
-            <h2>There's nothing here!</h2>
-        </main>
-
-        <!-- Sidebar -->
-        <aside>
-
-            <h2>RAJ - 7SI</h2>
-            <p class="tagline">The typical 7STARS Theme.</p>
-
-            <hr>
-
-            <h3>Contact Me</h3>
-            <p>Email: contact@7smail.ml</p>
-
-            <hr>
-
-            <h3>Total Pageviews</h3>
-            <p id="views">404</p>
-
-            <hr>
-
-            <h3>Translate</h3>
-            <select>
-                <option>Select Language</option>
-                <option>English</option>
-                <option>Hindi</option>
-                <option>Assamese</option>
+  <!-- Settings Modal -->
+  <div id="settingsModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Settings</h2>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="settings-section">
+          <h3>Main</h3>
+          <div class="settings-row">
+            <label>Language</label>
+            <select id="language">
+              <option>English</option>
+              <option>French</option>
+              <option>German</option>
+              <option>Spanish</option>
+              <option>Chinese</option>
+              <option>Japanese</option>
             </select>
-
-            <hr>
-
-            <h3>Popular Posts</h3>
-            <p>No posts yet</p>
-
-        </aside>
-
+          </div>
+          <div class="settings-row">
+            <label>Region</label>
+            <select id="region">
+              <option>Europe</option>
+              <option>North America</option>
+              <option>Asia</option>
+            </select>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        © 2022–2026 7STARS. All rights reserved.
-    </footer>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-brand">Project Skirk</div>
+    <div class="nav-buttons">
+      <button class="menu-btn" title="Menu">
+        <img src="https://ik.imagekit.io/gukc1okbd/menu.webp" class="icon" alt="Menu">
+      </button>
+      <button class="nav-settings-btn" id="topSettingsBtn" title="Settings">
+        <img src="https://ik.imagekit.io/gukc1okbd/settings.webp" class="icon" alt="Settings">
+      </button>
+    </div>
+  </nav>
 
-    <script src="script.js"></script>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="https://ik.imagekit.io/gukc1okbd/Crystallina_Shape.webp" alt="Logo">
+    <h1>Project Skirk</h1>
+    <p>A fan database for Genshin Impact players.</p>
+    <p>Allow me to fill the void left by homdgcat and hakush.in for you.</p>
+  </section>
 
+  <!-- Search Bar -->
+  <div style="padding: 13px 16px; max-width: 900px; margin: 0 auto; width: 100%; box-sizing: border-box;">
+    <div style="position: relative; display: flex; align-items: center; gap: 12px; width: 100%; box-sizing: border-box;">
+      <svg style="width: 20px; height: 20px; color: #7c5cff; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+      <input type="text" id="globalSearch" placeholder="Search characters, weapons, artifacts..." style="flex: 1; padding: 14px 16px; border: 2px solid rgba(124, 92, 255, 0.3); border-radius: 10px; color: white; font-size: 15px; font-family: 'SkirkFont', 'Segoe UI', system-ui; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(124, 92, 255, 0.05); min-width: 0; box-sizing: border-box;" onkeyup="performGlobalSearch(this.value)" onfocus="showSearchResults(); this.style.borderColor='rgba(124, 92, 255, 0.6)'; this.style.boxShadow='0 8px 24px rgba(124, 92, 255, 0.1)'" onblur="this.style.borderColor='rgba(124, 92, 255, 0.3)'; this.style.boxShadow='0 4px 12px rgba(124, 92, 255, 0.05)'">
+    </div>
+    <div id="searchResults" style="position: absolute; top: calc(100% + 12px); left: 0; right: 0; background: linear-gradient(135deg, rgba(50, 40, 80, 0.6) 0%, rgba(30, 20, 60, 0.5) 100%); border: 1px solid rgba(124, 92, 255, 0.3); border-radius: 12px; max-height: 450px; overflow-y: auto; overflow-x: hidden; display: none; z-index: 1000; box-shadow: 0 12px 32px rgba(124, 92, 255, 0.2); backdrop-filter: blur(10px); box-sizing: border-box;" onclick="event.stopPropagation()"></div>
+  </div>
+
+  <!-- Countdown -->
+  <div class="countdown-wrapper">
+    <div class="countdown-header">
+      <h2 class="countdown-title">Time Until Next Update</h2>
+      <button class="countdown-toggle" id="countdownToggle" title="Toggle countdown">
+        <span class="toggle-arrow">▼</span>
+      </button>
+    </div>
+    <div class="countdown" id="countdownContent">
+      <div class="time-box"><span id="days">00</span><p>Days</p></div>
+      <div class="time-box"><span id="hours">00</span><p>Hrs</p></div>
+      <div class="time-box"><span id="minutes">00</span><p>Mins</p></div>
+      <div class="time-box"><span id="seconds">00</span><p>Secs</p></div>
+    </div>
+  </div>
+
+  <!-- Cards Section -->
+  <section class="cards">
+    <a href="characters.html" class="card-link">
+      <div class="card character-card">
+        <img src="https://ik.imagekit.io/gukc1okbd/images.jpeg" alt="Characters">
+        <div class="card-content">
+          <h3>Characters</h3>
+          <p>Explore builds, abilities and meta insights.</p>
+        </div>
+      </div>
+    </a>
+    <a href="weapons.html" class="card-link">
+      <div class="card weapons-card">
+        <img src="https://ik.imagekit.io/gukc1okbd/Weapon_Azurelight_2nd.webp" alt="Weapons">
+        <div class="card-content">
+          <h3>Weapons</h3>
+          <p>Complete weapon guides and rankings.</p>
+        </div>
+      </div>
+    </a>
+    <a href="artifacts.html" class="card-link">
+      <div class="card artifacts-card">
+        <img src="https://ik.imagekit.io/gukc1okbd/UI_RelicIcon_15040_4.png" alt="Artifacts">
+        <div class="card-content">
+          <h3>Artifacts</h3>
+          <p>Best sets and optimization strategies.</p>
+        </div>
+      </div>
+    </a>
+  </section>
+
 </body>
 </html>
